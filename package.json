@@ -1,0 +1,27 @@
+{
+  "name": "rejuuv-giftcard",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/styled": "^11.8.1",
+    "gsap": "^3.12.5",
+    "next": "^12.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-slick": "^0.30.2",
+    "sass": "^1.77.0",
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.5",
+    "styled-theme": "^0.3.3"
+  },
+  "devDependencies": {
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.1.3"
+  }
+}
