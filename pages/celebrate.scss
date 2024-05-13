@@ -1,7 +1,198 @@
+.hero-background{
+  position: absolute;
+  display: block;
+  top: 0; right: 0; left: 0; bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.hero-background .radial-light {
+  position: absolute;
+  right: 0; left: 0; bottom: -375px;
+  margin: 0 auto;
+  height: auto;
+  width: 1337px;
+  background-blend-mode: screen;
+  mix-blend-mode: screen;
+  animation: fadeInAndScaleRadial 1s ease-in-out forwards;
+  z-index: 10;
+  @media screen and (max-width: 1440px) {
+    transform: translateX(-50%) !important;
+    margin-left: 50%;
+  }
+  @media screen and (max-width: 1199.98px) {
+    width: calc(100% + 250px);
+  }
+  @media screen and (max-width: 1023.98px) {
+    width: calc(100% + 400px);
+  }
+  @media screen and (max-width: 991.98px) {
+    width: calc(100% + 400px);
+  }
+}
+
+.hero-background .radial-light-particles {
+  position: absolute;
+  right: 0; left: 0; bottom: 160px;
+  margin: 0 auto;
+  height: auto;
+  width: 1387px;
+  background-blend-mode: screen;
+  mix-blend-mode: screen;
+  animation: fadeInParticlesRadial 1s ease-in-out forwards;
+  z-index: 10;
+  @media screen and (max-width: 1440px) {
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+  }
+}
+
+.hero-background .lamp-pillar-front {
+  position: absolute;
+  right: 0; left: 0; bottom: 133px;
+  margin: 0 auto;
+  height: auto;
+  width: 988px;
+  background-blend-mode: screen;
+  mix-blend-mode: screen;
+  animation: lampPillarFrontAnimation 1s ease-in forwards;
+  z-index: 5;
+  @media screen and (max-width: 1440px) {
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+  }
+  @media screen and (max-width: 1199.98px) {
+    width: calc(80%);
+  }
+}
+
+.hero-background .lamp-pillar-behind {
+  position: absolute;
+  right: 0; left: 0; bottom: 135px;
+  margin: 0 auto;
+  height: auto;
+  width: 1440px;
+  background-blend-mode: screen;
+  mix-blend-mode: screen;
+  animation: lampPillarBehindAnimation 1s ease-in forwards;
+  z-index: 3;
+  @media screen and (max-width: 1440px) {
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+  }
+  @media screen and (max-width: 1199.98px) {
+    width: calc(100%);
+    // width: calc(100% + 200px);
+  }
+}
+
+.hero-background .leaf-pillar {
+  position: absolute;
+  right: 0; left: 0; bottom: -64px;
+  margin: 0 auto;
+  height: auto;
+  width: 1355px;
+  animation: leafPillarAnimationDekstop 1s ease-in forwards;
+  z-index: 9;
+  @media screen and (max-width: 1440px) {
+    transform: translate(-50%, 0);
+    margin-left: 50%;
+  }
+  @media screen and (max-width: 1199.98px) {
+    width: calc(100% + 80px);
+    bottom: -24px;
+    animation: leafPillarAnimationDekstopTablet 1s ease-in forwards;
+  }
+  @media screen and (max-width: 991.98px) {
+    width: calc(100% + 60px);
+    bottom: 0;
+    animation: leafPillarAnimationTablet 1s ease-in forwards;
+  }
+}
+
+
+
+
+
+/* Animation */
+@keyframes fadeInAndScaleRadial {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes fadeInParticlesRadial {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes lampPillarFrontAnimation {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 133px;
+  }
+}
+@keyframes lampPillarBehindAnimation {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 135px;
+  }
+}
+@keyframes leafPillarAnimationDekstop {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: -64px;
+  }
+}
+@keyframes leafPillarAnimationDekstopTablet {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: -24px;
+  }
+}
+@keyframes leafPillarAnimationTablet {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 0;
+  }
+}
+
+
 
 .particles{
   position: relative;
   bottom: -150px;
+  @media screen and (max-width: 1199.98px) {
+    bottom: -300px;
+  }
 }
 .circle-container {
   $particleNum: 250;
@@ -24,7 +215,7 @@
       hsla(57.333, 69.3%, 76.9%, 0) 56%
     );
 
-    animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
+    animation: fadein-frames 200ms infinite, scale-frames 2S infinite;
 
     @keyframes fade-frames {
       0% {
@@ -66,11 +257,11 @@
 
       $startPositionY: random(10) + 100;
       $framesName: "move-frames-" + $i;
-      $moveDuration: 28000 + random(9000) + ms;
+      $moveDuration: 20000 + random(10000) + ms;
 
       animation-name: #{$framesName};
       animation-duration: $moveDuration;
-      animation-delay: random(37000) + ms;
+      animation-delay: random(30000) + ms;
 
       @keyframes #{$framesName} {
         from {
@@ -91,7 +282,7 @@
       }
 
       .circle {
-        animation-delay: random(4000) + ms;
+        animation-delay: random(3000) + ms;
       }
     }
   }

@@ -5,7 +5,7 @@ export const CelebrateSection = styled.section(() => ({
     position: 'relative',
     overflow: 'hidden',
     background: 'linear-gradient(180deg, #081C10 32.09%, #4E400F 105.63%)',
-    height: '977px',
+    height: 'auto',
     '& .gradient-overlay' : {
         position: 'absolute',
         top: '0',
@@ -187,6 +187,28 @@ export const CelebrateContent = styled.div(()=>({
     position: 'relative',
     zIndex: `100`,
     padding: '189px 0 406px',
+    transition: 'padding .3s ease-in-out',
+    '@media (max-width: 1400px)' : {
+        padding: '190px 0 464px',
+    },
+    '@media (max-width: 1199.98px)' : {
+        padding: '56px 0 640px',
+    },
+    '@media (max-width: 1063.98px)' : {
+        padding: '56px 0 590px',
+    },
+    '@media (max-width: 1023.98px)' : {
+        padding: '56px 0 575px',
+    },
+    '@media (max-width: 991.98px)' : {
+        padding: '56px 0 530px',
+    },
+    '@media (max-width: 899.98px)' : {
+        padding: '56px 0 450px',
+    },
+    '@media (max-width: 799.98px)' : {
+        padding: '56px 0 430px',
+    },
     '& .container' : {
         paddingRight: '15px',
         paddingLeft: '15px',
