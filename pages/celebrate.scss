@@ -22,13 +22,12 @@
     margin-left: 50%;
   }
   @media screen and (max-width: 1199.98px) {
-    width: calc(100% + 250px);
+    width: calc(100% + 100px);
+    bottom: -30vw;
   }
-  @media screen and (max-width: 1023.98px) {
-    width: calc(100% + 400px);
-  }
-  @media screen and (max-width: 991.98px) {
-    width: calc(100% + 400px);
+  @media screen and (max-width: 399.98px) {
+    width: calc(100% + 150px);
+    bottom: -37vw;
   }
 }
 
@@ -52,6 +51,12 @@
   @media screen and (max-width: 991.98px) {
     width: calc(100% + 60px + 32px);
   }
+  @media screen and (max-width: 767.98px) {
+    width: calc(100% + 100px + 32px);
+  }
+  @media screen and (max-width: 479.98px) {
+    width: calc(100% + 135px + 32px);
+  }
 }
 
 .hero-background .lamp-pillar-front {
@@ -71,6 +76,37 @@
   @media screen and (max-width: 1199.98px) {
     width: calc(80%);
   }
+  @media screen and (max-width: 767.98px) {
+    width: calc(75%);
+    bottom: 17vw;
+    animation: lampPillarFrontAnimationMobile 1s ease-in forwards;
+  }
+  &.lamp-pillar-front--dekstop{
+    @media screen and (max-width: 479.98px) {
+      display: none;
+    }
+  }
+  &.lamp-pillar-front--mobile{
+    display: none;
+    @media screen and (max-width: 479.98px) {
+      display: block;
+      width: 90%;
+      bottom: 17vw;
+      animation: lampPillarFrontAnimationMobile 1s ease-in forwards;
+    }
+    @media screen and (max-width: 399.98px) {
+      display: block;
+      width: 100%;
+      bottom: 17vw;
+      animation: lampPillarFrontAnimationMobile 1s ease-in forwards;
+    }
+    @media screen and (max-width: 349.98px) {
+      display: block;
+      width: 95%;
+      bottom: 17vw;
+      animation: lampPillarFrontAnimationMobile 1s ease-in forwards;
+    }
+  }
 }
 
 .hero-background .lamp-pillar-behind {
@@ -89,7 +125,14 @@
   }
   @media screen and (max-width: 1199.98px) {
     width: calc(100%);
-    // width: calc(100% + 200px);
+  }
+  @media screen and (max-width: 767.98px) {
+    width: calc(100% + 250px);
+    bottom: 17.5vw;
+    animation: lampPillarBehindAnimationMobile 1s ease-in forwards;
+  }
+  @media screen and (max-width: 639.98px) {
+    width: calc(100% + 200px);
   }
 }
 
@@ -114,6 +157,12 @@
     width: calc(100% + 60px);
     bottom: 0;
     animation: leafPillarAnimationTablet 1s ease-in forwards;
+  }
+  @media screen and (max-width: 767.98px) {
+    width: calc(100% + 100px);
+  }
+  @media screen and (max-width: 479.98px) {
+    width: calc(100% + 135px);
   }
 }
 
@@ -150,6 +199,16 @@
     bottom: 133px;
   }
 }
+@keyframes lampPillarFrontAnimationMobile {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 17vw;
+  }
+}
 @keyframes lampPillarBehindAnimation {
   0% {
     opacity: 0;
@@ -158,6 +217,16 @@
   100% {
     opacity: 1;
     bottom: 135px;
+  }
+}
+@keyframes lampPillarBehindAnimationMobile {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: 17.5vw;
   }
 }
 @keyframes leafPillarAnimationDekstop {

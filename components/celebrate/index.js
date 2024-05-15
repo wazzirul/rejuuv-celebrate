@@ -81,13 +81,22 @@ function Celebrate() {
             />
           )}
           {showLampPillarFront && (
-            <img
-                className="lamp-pillar-front"
-                src={'/assets/images/lamp-pillar-front.png'}
-                alt='Lamp Pillar Front'
-                width={988}
-                height={643}                    
-            />
+            <>
+              <img
+                  className="lamp-pillar-front lamp-pillar-front--dekstop"
+                  src={'/assets/images/lamp-pillar-front.png'}
+                  alt='Lamp Pillar Front'
+                  width={988}
+                  height={643}                    
+              />
+              <img
+                  className="lamp-pillar-front lamp-pillar-front--mobile"
+                  src={'/assets/images/lamp-pillar-front-mobile.png'}
+                  alt='Lamp Pillar Front'
+                  width={366.3}
+                  height={238.7}                    
+              />
+            </>
           )}
           {showLampPillarBehind && (
             <img

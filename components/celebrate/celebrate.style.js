@@ -25,6 +25,18 @@ export const CelebrateSection = styled.section(() => ({
         height: '430px',
         // background: 'linear-gradient(to bottom, rgba(48, 50, 18, 0), rgba(15, 17, 7, 0.703125) 53.6458%, #091D11)',
         background: `linear-gradient(180deg, rgba(48, 50, 18, 0.00) 7.39%, rgba(15, 17, 7, 0.70) 55.02%, #091D11 96.17%)`,
+        '@media (max-width: 767.98px)' : {
+            height: '400px',
+        },
+        '@media (max-width: 639.98px)' : {
+            height: '350px',
+        },
+        '@media (max-width: 575.98px)' : {
+            height: '300px',
+        },
+        '@media (max-width: 479.98px)' : {
+            height: '248px',
+        },
     },
 }))
 
@@ -209,6 +221,21 @@ export const CelebrateContent = styled.div(()=>({
     '@media (max-width: 799.98px)' : {
         padding: '56px 0 430px',
     },
+    '@media (max-width: 767.98px)' : {
+        padding: '56px 0 460px',
+    },
+    '@media (max-width: 575.98px)' : {
+        padding: '56px 0 400px',
+    },
+    '@media (max-width: 479.98px)' : {
+        padding: '56px 0 340px',
+    },
+    '@media (max-width: 399.98px)' : {
+        padding: '56px 0 333px',
+    },
+    '@media (max-width: 349.98px)' : {
+        padding: '56px 0 300px',
+    },
     '& .container' : {
         paddingRight: '15px',
         paddingLeft: '15px',
@@ -258,6 +285,10 @@ export const CelebrateContent = styled.div(()=>({
             fontWeight: '500',
             lineHeight: '24px',
             color: '#F99E26',
+            '@media (max-width: 575.98px)' : {
+                fontSize: '16px',
+                lineHeight: '22px',
+            },
         },
         '& .preview-content-title' : {
             fontSize: '64px',
@@ -269,6 +300,16 @@ export const CelebrateContent = styled.div(()=>({
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             maxWidth: '532px',
+            '@media (max-width: 575.98px)' : {
+                fontSize: '36px',
+                maxWidth: '375px',
+                lineHeight: '40px',
+            },
+            '@media (max-width: 399.98px)' : {
+                fontSize: '36px',
+                maxWidth: '340px',
+                lineHeight: '40px',
+            },
         },
         '& .preview-content-subtitle' : {
             fontSize: '18px',
@@ -277,6 +318,10 @@ export const CelebrateContent = styled.div(()=>({
             lineHeight: '24px',
             color: '#FFF',
             maxWidth: '426px',
+            '@media (max-width: 575.98px)' : {
+                fontSize: '16px',
+                lineHeight: '26px',
+            },
         },
     },
     '& .preview-heading': {
