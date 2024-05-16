@@ -150,8 +150,13 @@
   }
   @media screen and (max-width: 1199.98px) {
     width: calc(100% + 80px);
-    bottom: -24px;
+    bottom: -110px;
     animation: leafPillarAnimationDekstopTablet 1s ease-in forwards;
+  }
+  @media screen and (max-width: 1063.98px) {
+    width: calc(100% + 80px);
+    bottom: -70px;
+    animation: leafPillarAnimationDekstopTablet2nd 1s ease-in forwards;
   }
   @media screen and (max-width: 991.98px) {
     width: calc(100% + 60px);
@@ -246,7 +251,17 @@
   }
   100% {
     opacity: 1;
-    bottom: -24px;
+    bottom: -110px;
+  }
+}
+@keyframes leafPillarAnimationDekstopTablet2nd {
+  0% {
+    opacity: 0;
+    bottom: -100%;
+  }
+  100% {
+    opacity: 1;
+    bottom: -70px;
   }
 }
 @keyframes leafPillarAnimationTablet {
@@ -275,7 +290,7 @@
   }
 }
 .circle-container {
-  $particleNum: 250;
+  $particleNum: 300;
   $particleColor: hsl(57.333, 69.3%, 76.9%);
 
   position: absolute;
@@ -295,7 +310,7 @@
       hsla(57.333, 69.3%, 76.9%, 0) 56%
     );
 
-    animation: fadein-frames 200ms infinite, scale-frames 2S infinite;
+    animation: fade-frames 200ms infinite, scale-frames 1.8s infinite;
 
     @keyframes fade-frames {
       0% {
@@ -337,11 +352,11 @@
 
       $startPositionY: random(10) + 100;
       $framesName: "move-frames-" + $i;
-      $moveDuration: 20000 + random(10000) + ms;
+      $moveDuration: 7000 + random(23000) + ms;
 
       animation-name: #{$framesName};
       animation-duration: $moveDuration;
-      animation-delay: random(30000) + ms;
+      animation-delay: 1000 + random(19000) + ms;
 
       @keyframes #{$framesName} {
         from {
@@ -362,7 +377,7 @@
       }
 
       .circle {
-        animation-delay: random(3000) + ms;
+        animation-delay: 2000 + random(3000) + ms;
       }
     }
   }

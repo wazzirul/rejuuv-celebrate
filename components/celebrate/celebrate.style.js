@@ -213,16 +213,16 @@ export const CelebrateContent = styled.div(()=>({
         padding: '56px 0 575px',
     },
     '@media (max-width: 991.98px)' : {
-        padding: '56px 0 530px',
+        padding: '56px 0 590px',
     },
     '@media (max-width: 899.98px)' : {
-        padding: '56px 0 450px',
+        padding: '56px 0 530px',
     },
     '@media (max-width: 799.98px)' : {
-        padding: '56px 0 430px',
+        padding: '56px 0 460px',
     },
     '@media (max-width: 767.98px)' : {
-        padding: '56px 0 460px',
+        padding: '56px 0 470px',
     },
     '@media (max-width: 575.98px)' : {
         padding: '56px 0 400px',
