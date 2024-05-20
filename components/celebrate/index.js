@@ -16,7 +16,7 @@ function Celebrate() {
 
     const circles = [];
     
-    for (let i = 1; i <= 200; i++) {
+    for (let i = 1; i <= 300; i++) {
         circles.push(
         <div key={i} className="circle-container">
             <div className="circle"></div>
